@@ -17,9 +17,8 @@ const Breadcrumb = ({
                 <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   {pageName}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
-                  {description}
-                </p>
+                <p className="text-base font-medium leading-relaxed text-body-color" dangerouslySetInnerHTML={{ __html: description }}/>
+                
               </div>
             </div>
             <div className="w-full px-4 md:w-4/12 lg:w-5/12">

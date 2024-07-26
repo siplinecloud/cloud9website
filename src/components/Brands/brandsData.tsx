@@ -1,19 +1,13 @@
 import { Brand } from "@/types/brand";
 
 const brandsData: Brand[] = [
-  {
-    id: 6,
-    name: "Formbold",
-    href: "https://formbold.com",
-    image: "/images/brands/formbold.svg",
-    imageLight: "/images/brands/formbold-light.svg",
-  },
+  
   {
     id: 1,
-    name: "UIdeck",
-    href: "https://uideck.com",
-    image: "/images/brands/uideck.svg",
-    imageLight: "/images/brands/uideck-light.svg",
+    name: "Economic Freedom Fighters",
+    href: "/",
+    image: "/images/brands/efflogoLight.png",
+    imageLight: "/images/brands/efflogo.png",
   },
   {
     id: 2,
@@ -43,6 +37,13 @@ const brandsData: Brand[] = [
     image: "/images/brands/plainadmin.svg",
     imageLight: "/images/brands/plainadmin-light.svg",
   },
+  {
+    id: 6,
+    name: "Formbold",
+    href: "https://formbold.com",
+    image: "/images/brands/formbold.svg",
+    imageLight: "/images/brands/formbold-light.svg",
+  }
 ];
 
 export default brandsData;

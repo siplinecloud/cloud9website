@@ -1,50 +1,50 @@
-import { Testimonial } from "@/types/testimonial";
+import {  TeamType } from "@/types/team";
 import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import Members from "./Members";
 
-const testimonialData: Testimonial[] = [
+const teamData: TeamType[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Mark Banda",
+    designation: "CEO",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
+      "With over 10 years of experience in the telecommunications industry, Mark leads Cloud9 Innovations with a vision for innovation and excellence.",
+    image: "/images/testimonials/auth-03.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Bright Tembo",
+    designation: "CTO",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "A technology enthusiast with a passion for problem-solving, Bright drives the technical direction of our company, ensuring our solutions are cutting-edge and reliable.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "Wisdom Mhango",
+    designation: "Lead Developer",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Wisdom is the mastermind behind our software solutions, continuously improving and expanding our offerings to meet the evolving needs of our clients.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
 ];
 
-const Testimonials = () => {
+const Team = () => {
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Our Team"
+          paragraph="At Cloud9 Innovations, our strength lies in our people. We are a diverse group of professionals dedicated to delivering the best in call center solutions and communication systems."
           center
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+          {teamData.map((member) => (
+            <Members key={member.id} member={member} />
           ))}
         </div>
       </div>
@@ -180,4 +180,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Team;
