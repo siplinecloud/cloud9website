@@ -9,7 +9,7 @@ const teamData: TeamType[] = [
     designation: "CEO",
     content:
       "With over 10 years of experience in the telecommunications industry, Mark leads Cloud9 Innovations with a vision for innovation and excellence.",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/team/mark.jpg",
     star: 5,
   },
   {
@@ -18,7 +18,7 @@ const teamData: TeamType[] = [
     designation: "CTO",
     content:
       "A technology enthusiast with a passion for problem-solving, Bright drives the technical direction of our company, ensuring our solutions are cutting-edge and reliable.",
-    image: "/images/testimonials/auth-02.png",
+    image: "/images/team/bright.jpg",
     star: 5,
   },
   {
@@ -27,7 +27,7 @@ const teamData: TeamType[] = [
     designation: "Lead Developer",
     content:
       "Wisdom is the mastermind behind our software solutions, continuously improving and expanding our offerings to meet the evolving needs of our clients.",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/team/wisdom.jpg",
     star: 5,
   },
 ];
