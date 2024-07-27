@@ -28,7 +28,7 @@ const menuData: Menu[] = [
    {
     id: 3,
     title: "Photos",
-    path: "#",
+    path: "/system-photos",
     newTab: false,
   },
   // {
