@@ -10,11 +10,11 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
   const email = formData.get("email") as string
   const message = formData.get("message") as string
   try {
-    const resend = new Resend("re_TqFCdiE5_EByABraRF9SLJp3Hnudz4dHE") 
+    const resend = new Resend("re_XaBcys1y_N6uvD2gG7xXTh9zRatzeYH8t") 
     // const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: "Cloud9 Innovations <onboarding@resend.dev>",
-      to: email,
+      to: "developer.siplinecloud@gmail.com",
       subject: "Client's Email",
       react: EmailTemplate({ name, email, message })
     })
