@@ -99,12 +99,12 @@ const Header = () => {
                     }`}
                 >
                   
-                  <Link
+                  {/* <Link
                   href="/system-photos"
                   className=" block px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:hidden"
                 >
                     View Photos
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/demo-request"
                     className=" block ease-in-up shadow-btn hover:shadow-btn-hover rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:hidden md:px-9 lg:px-6 xl:px-9"
@@ -169,15 +169,15 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+                {/* <Link
                   href="/system-photos"
                   className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                 >
                   View Photos
-                </Link>
+                </Link> */}
                 <Link
                   href="/demo-request"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-amber-400 px-8 py-3 text-base font-medium text-black transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Request Demo
                 </Link>

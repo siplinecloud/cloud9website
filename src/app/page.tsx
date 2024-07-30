@@ -29,7 +29,7 @@ export default function Home() {
       <Video />
       <Brands />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
       <Offer />
       <Team />
       {/* <Pricing /> */}

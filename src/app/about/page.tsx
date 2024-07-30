@@ -18,7 +18,7 @@ const AboutPage = () => {
         description="At Cloud9 Innovations, we are dedicated to revolutionizing the way businesses communicate. With a strong foundation built on Asterisk PBX, we specialize in creating innovative call center solutions tailored to meet the unique needs of our clients."
       />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
     </>
   );
 };

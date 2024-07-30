@@ -105,7 +105,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button disabled={isLoading} type="submit" className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button disabled={isLoading} type="submit" className="rounded-sm bg-amber-400 px-9 py-4 text-base font-medium text-black shadow-submit duration-300 hover:bg-opacity-90 hover:shadow-btn-hover dark:shadow-submit-dark">
                       {isLoading ? "Submiting Ticket..." : "Submit Ticket"}
                     </button>
                   </div>

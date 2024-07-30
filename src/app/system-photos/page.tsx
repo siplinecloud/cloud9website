@@ -25,7 +25,7 @@ const systemPhotos = () => {
                   <div className="mb-5">
                     <a
                       href="/demo-request"
-                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+                      className="inline-flex items-center justify-center rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-black hover:bg-opacity-90 hover:shadow-btn-hover"
                     >
                       Request demo
                     </a>
@@ -83,7 +83,7 @@ const systemPhotos = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="mb-10 w-full overflow-hidden rounded">
+                  {/* <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <a href="/images/cloud9/cloud5.png" target="_blank" rel="noopener noreferrer">
                       <Image
@@ -94,7 +94,7 @@ const systemPhotos = () => {
                       />
                       </a>
                     </div>
-                  </div>
+                  </div> */}
               
                 </div>
               </div>

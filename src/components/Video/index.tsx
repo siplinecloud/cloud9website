@@ -26,7 +26,7 @@ const Video = () => {
               data-wow-delay=".15s"
             >
               <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/Help.png" alt="video image" width={4000} height={4000} />
+                <Image src="/images/bgs/bg6.jpg" alt="call center image" width={4000} height={4000} />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
                  
                 </div>

@@ -24,7 +24,7 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Our Mission."
+                title="Our Mission"
                 paragraph="Our mission is to empower businesses with cutting-edge communication tools that enhance efficiency, improve customer interactions, and drive growth. We believe in the power of technology to transform business operations and are committed to delivering solutions that are both robust and user-friendly."
                 mb="44px"
               />
@@ -48,21 +48,29 @@ const AboutSectionOne = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+            <SectionTitle
+                title="Our Vision"
+                paragraph=" We envision a future where seamless communication is at the heart of every successful business.
+                  By continuously innovating and adapting to the latest technological advancements,
+                  we strive to be a leading provider of call center solutions worldwide."
+                mb="44px"
+              />
+
+            <div className="max-w-[470px]">
+        
+              <div className="mb-2">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Contact Us
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <strong>Email:</strong> info@cloud9innovations.com<br />
+                  <strong>Phone:</strong> +123-456-7890<br />
+                  <strong>Address:</strong> Sunnyside, Blantyre Malawi.<br />
+                </p>
               </div>
+
             </div>
+          </div>
           </div>
         </div>
       </div>
