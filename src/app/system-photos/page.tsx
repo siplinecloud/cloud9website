@@ -37,6 +37,30 @@ const systemPhotos = () => {
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+                    <a href="/images/cloud9/cloud5.png" target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src="/images/cloud9/cloud5.png"
+                        alt="image"
+                        fill
+                        className="object-cover object-center"
+                      />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="mb-10 w-full overflow-hidden rounded">
+                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+                    <a href="/images/cloud9/cloud3.png" target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src="/images/cloud9/cloud3.png"
+                        alt="image"
+                        fill
+                        className="object-cover object-center"
+                      />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="mb-10 w-full overflow-hidden rounded">
+                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <a href="/images/cloud9/cloud1.png" target="_blank" rel="noopener noreferrer">
                       <Image
                         src="/images/cloud9/cloud1.png"
@@ -59,18 +83,7 @@ const systemPhotos = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="mb-10 w-full overflow-hidden rounded">
-                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud3.png" target="_blank" rel="noopener noreferrer">
-                      <Image
-                        src="/images/cloud9/cloud3.png"
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
-                      </a>
-                    </div>
-                  </div>
+                  
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <a href="/images/cloud9/cloud4.png" target="_blank" rel="noopener noreferrer">
@@ -83,19 +96,6 @@ const systemPhotos = () => {
                       </a>
                     </div>
                   </div>
-                  {/* <div className="mb-10 w-full overflow-hidden rounded">
-                    <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud5.png" target="_blank" rel="noopener noreferrer">
-                      <Image
-                        src="/images/cloud9/cloud5.png"
-                        alt="image"
-                        fill
-                        className="object-cover object-center"
-                      />
-                      </a>
-                    </div>
-                  </div> */}
-              
                 </div>
               </div>
             </div>
