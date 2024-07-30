@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const ContactPage = () => {
 
   const description = `
-  <strong>Email:</strong> info@cloud9innovations.com<br/> 
-  <strong>Phone:</strong> +123-456-7890<br/> 
-  <strong>Address:</strong> Sunnyside Blantyre Malawi.
+  <span  className="text-white">Email:</span> info@cloud9innovations.com<br/> 
+  <span  className="text-white">Phone:</span> +123-456-7890<br/> 
+  <span  className="text-white">Address:</span> Sunnyside Blantyre Malawi.
 `;
   return (
     <>

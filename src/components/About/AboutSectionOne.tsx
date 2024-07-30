@@ -63,9 +63,9 @@ const AboutSectionOne = () => {
                   Contact Us
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  <strong>Email:</strong> info@cloud9innovations.com<br />
-                  <strong>Phone:</strong> +123-456-7890<br />
-                  <strong>Address:</strong> Sunnyside, Blantyre Malawi.<br />
+                  <span  className="text-white">Email:</span> info@cloud9innovations.com<br />
+                  <span  className="text-white">Phone:</span> +123-456-7890<br />
+                  <span  className="text-white">Address:</span> Sunnyside, Blantyre Malawi.<br />
                 </p>
               </div>
 
