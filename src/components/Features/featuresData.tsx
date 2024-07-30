@@ -15,10 +15,10 @@ const featuresData: Feature[] = [
     title: "Advanced Call Center Solutions",
     paragraph: (
       <>
-        <strong>Click-to-Dial:</strong> Streamline your workflow with one-click dialing.<br />
-        <strong>Auto Dialer:</strong> Optimize outbound calls with automated dialing.<br />
-        <strong>Interactive Voice Response (IVR):</strong> Offer a professional and interactive experience for callers.<br />
-        <strong>Inbound Queue Management:</strong> Efficiently handle high call volumes and reduce wait times.<br />
+        <p className="text-white">Click-to-Dial:</p> Streamline your workflow with one-click dialing.<br />
+        <p className="text-white">Auto Dialer:</p> Optimize outbound calls with automated dialing.<br />
+        <p className="text-white">Interactive Voice Response (IVR):</p> Offer a professional and interactive experience for callers.<br />
+        <p className="text-white">Inbound Queue Management:</p> Efficiently handle high call volumes and reduce wait times.<br />
       </>
 
       ),
@@ -37,8 +37,8 @@ const featuresData: Feature[] = [
     title: "Comprehensive Communication Tools",
     paragraph: (
       <>
-        <strong>Unified Communications:</strong> Integrate voice, video, messaging, and more.<br />
-        <strong>Reporting & Analytics:</strong> Gain insights into your call center performance with detailed reports.<br />
+        <p className="text-white">Unified Communications:</p> Integrate voice, video, messaging, and more.<br />
+        <p className="text-white">Reporting & Analytics:</p> Gain insights into your call center performance with detailed reports.<br />
      </>
 
       ),
@@ -57,8 +57,8 @@ const featuresData: Feature[] = [
     title: "Customization and Scalability",
     paragraph: (
       <>
-        <strong>Tailored Solutions:</strong> Customized to meet the unique needs of your business.<br />
-        <strong>Scalable Systems:</strong> Grow your call center without worrying about system limitations.<br />
+        <p className="text-white">Tailored Solutions:</p> Customized to meet the unique needs of your business.<br />
+        <p className="text-white">Scalable Systems:</p> Grow your call center without worrying about system limitations.<br />
      </>
 
       ),
