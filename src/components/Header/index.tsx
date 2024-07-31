@@ -102,7 +102,7 @@ const Header = () => {
 
                   <Link
                     href="/demo-request"
-                    className=" block ease-in-up shadow-btn hover:shadow-btn-hover rounded-sm bg-amber-400 px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:hidden md:px-9 lg:px-6 xl:px-9"
+                    className=" block ease-in-up shadow-btn hover:shadow-btn-hover rounded-sm bg-amber-400 px-8 py-3 text-base font-medium text-black transition duration-300 hover:bg-opacity-90 md:hidden md:px-9 lg:px-6 xl:px-9"
                   >
                     Request Demo
                   </Link>
