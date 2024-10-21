@@ -33,7 +33,7 @@ const teamData: TeamType[] = [
   {
     id: 4,
     name: "Precious Dumuka",
-    designation: "Developer",
+    designation: "Software Developer",
     content:
       "Precious Dumuka is a dedicated developer with a passion for creating innovative and efficient solutions. With a keen eye for detail and a commitment to continuous improvement.",
     image: "/images/team/precious.jpg",
