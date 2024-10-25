@@ -1,82 +1,41 @@
-"use client";
+import Link from "next/link";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-
-
-const Hero2 = () => {
+const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
-    >
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto max-w-[800px] text-center">
-              <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{ delay: 3000 }}
-                pagination={{ clickable: true }}
-                modules={[Pagination, Autoplay]} // Pass the modules here
-              >
-                <SwiperSlide>
-                  <div>
-                    <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      Leading the Future of Call Center Solutions
-                    </h1>
-                    <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                      At Cloud9 Innovations, we harness the power of Asterisk PBX to provide top-tier communication systems and call center solutions designed to enhance your business operations.
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div>
-                    <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      Seamless Communication Systems
-                    </h1>
-                    <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                      Discover the future of efficient communication and operational solutions tailored to optimize productivity.
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div>
-                    <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      Customized Solutions for Every Business
-                    </h1>
-                    <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                    We tailor our solutions to fit the unique needs of every client, driving efficient communication and client satisfaction.
-                    </p>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-
-              <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                {/* <Link
-                  href="#"
-                  className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                >
-                  Request For Demo
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                >
-                  View System Photos
-                </Link> */}
+    <>
+      <section
+        id="home"
+        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+      >
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="mx-auto max-w-[800px] text-center">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                Leading the Future of Call Center Solutions
+                </h1>
+                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                At Cloud9 Innovations, we harness the power of Asterisk PBX to provide top-tier communication systems and call center solutions designed to enhance your business operations.
+                </p>
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                 {/* <Link
+                    href="https://nextjstemplates.com/templates/saas-starter-startup"
+                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                  >
+                    Request For Demo
+                  </Link>
+                   <Link
+                    href="https://github.com/NextJSTemplates/startup-nextjs"
+                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                  >
+                    View System Photos
+                  </Link> */}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -317,8 +276,9 @@ const Hero2 = () => {
             </defs>
           </svg>
         </div>
-    </section>
+      </section>
+    </>
   );
 };
 
-export default Hero2;
+export default Hero;
