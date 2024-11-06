@@ -42,7 +42,7 @@ const AboutSectionTwo = () => {
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                   <p className="text-white">Email:</p> info@cloud9innovations.com<br />
-                  <p className="text-white">Phone:</p> +123-456-7890<br />
+                  <p className="text-white">Phone:</p> +265 884 87 98 94<br />
                   <p className="text-white">Address:</p> Sunnyside, Blantyre Malawi.<br />
                 </p>
               </div>

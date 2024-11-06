@@ -27,7 +27,7 @@ const menuData: Menu[] = [
   },
    {
     id: 3,
-    title: "View System Screenshots",
+    title: "Our Projects",
     path: "/system-photos",
     newTab: false,
   },
