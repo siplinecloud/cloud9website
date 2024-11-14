@@ -49,7 +49,7 @@ const systemPhotos = () => {
                   </div>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud3.png" target="_blank" rel="noopener noreferrer">
+                    <a href="/images/cloud9/admin-dashboard.png" target="_blank" rel="noopener noreferrer">
                       <Image
                         src="/images/cloud9/cloud3.png"
                         alt="image"
@@ -61,7 +61,7 @@ const systemPhotos = () => {
                   </div>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud1.png" target="_blank" rel="noopener noreferrer">
+                    <a href="/images/cloud9/agent-dashboard.png" target="_blank" rel="noopener noreferrer">
                       <Image
                         src="/images/cloud9/cloud1.png"
                         alt="image"
@@ -73,7 +73,7 @@ const systemPhotos = () => {
                   </div>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud2.png" target="_blank" rel="noopener noreferrer">
+                    <a href="/images/cloud9/Screenshot 2024-11-14 195616.png" target="_blank" rel="noopener noreferrer">
                       <Image
                         src="/images/cloud9/cloud2.png"
                         alt="image"
@@ -86,7 +86,7 @@ const systemPhotos = () => {
                   
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                    <a href="/images/cloud9/cloud4.png" target="_blank" rel="noopener noreferrer">
+                    <a href="/images/cloud9/heatmap.png" target="_blank" rel="noopener noreferrer">
                       <Image
                         src="/images/cloud9/cloud4.png"
                         alt="image"
