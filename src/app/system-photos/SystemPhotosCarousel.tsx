@@ -23,7 +23,7 @@ const SystemPhotosCarousel = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 5000 }}
       className="mb-10 w-full overflow-hidden rounded"
     >
       {images.map((image, index) => (
