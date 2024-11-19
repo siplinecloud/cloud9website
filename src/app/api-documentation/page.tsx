@@ -254,7 +254,7 @@ const ApiDocumentationPage = () => {
                     Endpoint Overview
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    The api/leads/campaign_id endpoint is used to upload multiple leads to a specific campaign. Developers must pass the campaign_id as a URL parameter and a list of leads as part of the request body.
+                    The api/leads/campaign_id endpoint is used to upload multiple leads to a specific campaign. Developers must pass the campaign_id as a URL parameter and a list of leads as part of the request body. Where  $leads should be declared as an array to hold all the leads,  see example code snippets below.
                   </p><br />
                   <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
                     Endpoint Details
