@@ -13,7 +13,7 @@ const ContactPage = () => {
 
   const description = `
   <span  className="text-white">Email:</span> info@cloud9innovations.com<br/> 
-  <span  className="text-white">Phone:</span> +123-456-7890<br/> 
+  <span  className="text-white">Phone:</span> +265 111 80 01 01<br/> 
   <span  className="text-white">Address:</span> Sunnyside Blantyre Malawi.
 `;
   return (
