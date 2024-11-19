@@ -1,6 +1,6 @@
 import React from "react";
 
-const ApiDocumentationPage = () => {
+const ApiDocumentationPage = ({ campaign_id }: { campaign_id: string }) => {
   return (
     <section className="min-h-screen bg-gray-100 py-36 dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -66,14 +66,6 @@ const ApiDocumentationPage = () => {
                     className="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-amber-400 hover:text-black dark:text-gray-300 dark:hover:bg-amber-500"
                   >
                     Integration Workflow
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#development-notes"
-                    className="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-amber-400 hover:text-black dark:text-gray-300 dark:hover:bg-amber-500"
-                  >
-                    Development Notes
                   </a>
                 </li>
               </ul>
@@ -192,7 +184,7 @@ const ApiDocumentationPage = () => {
                 </div>
               </section>
 
-              {/* Other Sections */}
+              {/* Campaign management */}
               <section id="campaign-management" className="mb-8">
                 <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
                   Campaign Management
@@ -251,28 +243,40 @@ const ApiDocumentationPage = () => {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   Use the `/leads` endpoint to upload leads to specific campaigns.
-                </p>
+                </p><br />
 
                 {/* Upload Leads */}
                 <div className="mb-6">
                   <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    1. Upload Leads
+                    {`api/leads/${campaign_id}`}
+                  </h3>
+                  <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
+                    Endpoint Overview
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Uploads multiple leads to a specific campaign.
-                  </p>
+                    The api/leads/{campaign_id} endpoint is used to upload multiple leads to a specific campaign. Developers must pass the campaign_id as a URL parameter and a list of leads as part of the request body.
+                  </p><br />
+                  <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
+                    Endpoint Details
+                  </h3>
                   <pre className="mt-4 rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-                    Endpoint: /leads{"\n"}
-                    Method: GET{"\n"}
-                    Headers: 
+                  •
+                  URL: POST /api/leads/{campaign_id}{"\n"}
+                  •
+                  Method: POST{"\n"}
+                  •
+                  Authentication: Requires a valid Bearer token in the Authorization header.{"\n"}
+                  •
+                  Headers:
                   </pre>
-                  <p className="mt-4 text-gray-600 dark:text-gray-400">MAkefile:</p>
+                  <p className="mt-4 text-gray-600 dark:text-gray-400">plaintext:</p>
                   <pre className="mt-4 rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                     {`
   Authorization: Bearer <access_token>
+  Content-Type: application/json
 `}
                   </pre>
-                  <p className="mt-4 text-gray-600 dark:text-gray-400">Body:</p>
+                  {/* <p className="mt-4 text-gray-600 dark:text-gray-400">Body:</p>
                   <pre className="mt-4 rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                     {`{
   "leads": [
@@ -326,8 +330,444 @@ const ApiDocumentationPage = () => {
    ]
   }
 }`}
-                  </pre>
+                  </pre> */}
                 </div>
+                <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
+        Request Parameters
+      </h2>
+
+      {/* URL Parameters */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          URL Parameter
+        </h3>
+        <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
+          <thead>
+            <tr className="bg-gray-100 dark:bg-gray-800">
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Name
+              </th>
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Type
+              </th>
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Description
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                campaign_id
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                int
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                ID of the campaign to which the leads are being added.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Request Body */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Request Body
+        </h3>
+        <p className="mb-4 text-gray-600 dark:text-gray-400">
+          The request body should include a leads array, where each item
+          represents a lead with the following fields:
+        </p>
+        <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
+          <thead>
+            <tr className="bg-gray-100 dark:bg-gray-800">
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Field
+              </th>
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Type
+              </th>
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Required
+              </th>
+              <th className="border border-gray-300 p-2 text-left dark:border-gray-700">
+                Description
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                fullname
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Yes
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Full name of the lead.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                national_id
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Yes
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                National ID or identification number of the lead.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                primary_number
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Yes
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Primary contact number of the lead. Must start with one of the
+                allowed country codes.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                secondary_number
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                No
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Secondary contact number of the lead. Must start with one of
+                the allowed country codes if provided.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                physical_address
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                No
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Physical address of the lead.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                email
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Yes
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Email address of the lead.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                supplier
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                string
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                No
+              </td>
+              <td className="border border-gray-300 p-2 dark:border-gray-700">
+                Supplier or source of the lead.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
+        Example Request
+      </h2>
+
+      {/* URL */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          URL
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          POST https://cloud9.sipline-cloud.com/api/leads/2
+        </pre>
+      </div>
+
+      {/* Headers */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Headers
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          Authorization: Bearer your_access_token
+          {"\n"}Content-Type: application/json
+        </pre>
+      </div>
+
+      {/* Body */}
+      <div>
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Body
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          {`{
+  "leads": [
+    {
+      "fullname": "John Doe",
+      "national_id": "123456789",
+      "primary_number": "27123456789",
+      "secondary_number": "265987654321",
+      "physical_address": "123 Main Street",
+      "email": "johndoe@example.com",
+      "supplier": "Supplier A"
+    },
+    {
+      "fullname": "Jane Smith",
+      "national_id": "987654321",
+      "primary_number": "91234567890",
+      "secondary_number": "27123456787",
+      "physical_address": "456 Elm Street",
+      "email": "janesmith@example.com",
+      "supplier": "Supplier B"
+    }
+  ]
+}`}
+        </pre>
+      </div><br />
+      <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
+        Response
+      </h2>
+
+      {/* Success Response */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Success
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          {`{
+  "message": "Leads processed successfully",
+  "total_processed": 2,
+  "total_inserted": 1,
+  "total_skipped": 1
+}`}
+        </pre>
+        <ul className="mt-4 space-y-2 text-gray-600 dark:text-gray-400">
+          <li>
+            <strong>total_processed:</strong> Total number of leads received.
+          </li>
+          <li>
+            <strong>total_inserted:</strong> Number of leads successfully added to the campaign.
+          </li>
+          <li>
+            <strong>total_skipped:</strong> Number of leads skipped due to duplicates or validation issues.
+          </li>
+        </ul>
+      </div>
+
+      {/* Validation Error Response */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Validation Error
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          {`{
+  "errors": {
+    "leads.1.primary_number": [
+      "The primary_number must start with one of the following country codes: 27, 265, 91, 1."
+    ]
+  }
+}`}
+        </pre>
+      </div>
+
+      {/* Invalid Campaign ID */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Invalid Campaign ID
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          {`{
+  "error": "Invalid campaign_id"
+}`}
+        </pre>
+      </div>
+
+      {/* Unauthorized Response */}
+      <div>
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          Unauthorized
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+          {`{
+  "error": "Unauthenticated."
+}`}
+        </pre>
+      </div>
+      <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
+        Integration Examples
+      </h2>
+
+      {/* PHP Example */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          1. PHP (Using cURL)
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200 overflow-x-auto">
+          {`<?php
+$campaignId = 2;
+$url = "https://cloud9.sipline-cloud.com/api/leads/$campaignId";
+$accessToken = 'your_access_token_here';
+$leads = [
+  [
+    'fullname' => 'John Doe',
+    'national_id' => '123456789',
+    'primary_number' => '27123456789',
+    'secondary_number' => '265987654321',
+    'physical_address' => '123 Main Street',
+    'email' => 'johndoe@example.com',
+    'supplier' => 'Supplier A',
+  ],
+  [
+    'fullname' => 'Jane Smith',
+    'national_id' => '987654321',
+    'primary_number' => '91234567890',
+    'secondary_number' => '27123456787',
+    'physical_address' => '456 Elm Street',
+    'email' => 'janesmith@example.com',
+    'supplier' => 'Supplier B',
+  ],
+];
+$headers = [
+  "Authorization: Bearer $accessToken",
+  "Content-Type: application/json",
+];
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['leads' => $leads]));
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+echo $response;
+?>`}
+        </pre>
+      </div>
+      {/* Python Example */}
+      <div className="mb-6">
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          2. Python (Using requests)
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200 overflow-x-auto">
+          {`import requests
+
+url = "https://cloud9.sipline-cloud.com/api/leads/2"
+access_token = "your_access_token_here"
+leads = [
+  {
+    "fullname": "John Doe",
+    "national_id": "123456789",
+    "primary_number": "27123456789",
+    "secondary_number": "265987654321",
+    "physical_address": "123 Main Street",
+    "email": "johndoe@example.com",
+    "supplier": "Supplier A",
+  },
+  {
+    "fullname": "Jane Smith",
+    "national_id": "987654321",
+    "primary_number": "91234567890",
+    "secondary_number": "27123456787",
+    "physical_address": "456 Elm Street",
+    "email": "janesmith@example.com",
+    "supplier": "Supplier B",
+  },
+]
+
+response = requests.post(
+  url,
+  json={"leads": leads},
+  headers={
+    "Authorization": f"Bearer {access_token}",
+    "Content-Type": "application/json"
+  }
+)
+
+print(response.status_code, response.json())`}
+        </pre>
+      </div>
+
+      {/* JavaScript Example */}
+      <div>
+        <h3 className="mb-2 text-lg font-medium text-gray-600 dark:text-gray-400">
+          3. JavaScript (Using Axios)
+        </h3>
+        <pre className="rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200 overflow-x-auto">
+          {`const axios = require('axios');
+
+const campaignId = 2;
+const url = \`https://cloud9.sipline-cloud.com/api/leads/\${campaignId}\`;
+const accessToken = 'your_access_token_here';
+
+const leads = [
+  {
+    fullname: 'John Doe',
+    national_id: '123456789',
+    primary_number: '27123456789',
+    secondary_number: '265987654321',
+    physical_address: '123 Main Street',
+    email: 'johndoe@example.com',
+    supplier: 'Supplier A',
+  },
+  {
+    fullname: 'Jane Smith',
+    national_id: '987654321',
+    primary_number: '91234567890',
+    secondary_number: '27123456787',
+    physical_address: '456 Elm Street',
+    email: 'janesmith@example.com',
+    supplier: 'Supplier B',
+  },
+];
+
+axios
+  .post(url, { leads }, {
+    headers: {
+      Authorization: \`Bearer \${accessToken}\`,
+      'Content-Type': 'application/json',
+    },
+  })
+  .then((response) => {
+    console.log('Response:', response.data);
+  })
+  .catch((error) => {
+    console.error('Error:', error.response.status, error.response.data);
+  });`}
+        </pre>
+      </div>
+    
               </section>
 
               <section id="error-handling" className="mb-8">
@@ -404,20 +844,6 @@ const ApiDocumentationPage = () => {
                 </pre>
               </section>
 
-              <section id="development-notes" className="mb-8">
-                <h2 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
-                  Development Notes
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  1. <strong>Rate Limiting:</strong> Ensure you handle rate limits for API requests (configured per server settings).
-                </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  2. <strong>Pagination:</strong> If listing campaigns grows large, pagination can be enabled by appending ?page=1 to /campaigns.
-                </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  3. <strong>Country Code Validation:</strong> The primary_number and secondary_number must start with 27 (not
-                </p>
-              </section>
             </div>
           </main>
         </div>
