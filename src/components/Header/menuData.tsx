@@ -31,6 +31,12 @@ const menuData: Menu[] = [
     path: "/system-photos",
     newTab: false,
   },
+  {
+    id: 6,
+    title: "API Documentation",
+    path: "/api-documentation",
+    newTab: false,
+  },
   // {
   //   id: 5,
   //   title: "Pages",
