@@ -1,6 +1,6 @@
 import React from "react";
 
-const ApiDocumentationPage = ({ campaign_id }: { campaign_id: string }) => {
+const ApiDocumentationPage = () => {
   return (
     <section className="min-h-screen bg-gray-100 py-36 dark:bg-gray-900">
       <div className="container mx-auto px-4">
@@ -248,20 +248,20 @@ const ApiDocumentationPage = ({ campaign_id }: { campaign_id: string }) => {
                 {/* Upload Leads */}
                 <div className="mb-6">
                   <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
-                    {`api/leads/${campaign_id}`}
+                    {`api/leads/$campaign_id`}
                   </h3>
                   <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
                     Endpoint Overview
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    The api/leads/{campaign_id} endpoint is used to upload multiple leads to a specific campaign. Developers must pass the campaign_id as a URL parameter and a list of leads as part of the request body.
+                    The api/leads/campaign_id endpoint is used to upload multiple leads to a specific campaign. Developers must pass the campaign_id as a URL parameter and a list of leads as part of the request body.
                   </p><br />
                   <h3 className="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
                     Endpoint Details
                   </h3>
                   <pre className="mt-4 rounded bg-gray-100 p-4 text-sm text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                   •
-                  URL: POST /api/leads/{campaign_id}{"\n"}
+                  URL: POST /api/leads/campaign_id{"\n"}
                   •
                   Method: POST{"\n"}
                   •
