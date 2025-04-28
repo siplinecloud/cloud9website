@@ -13,6 +13,7 @@ import Team from "@/components/Team";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 import Hero2 from "@/components/Hero2";
+import ResellerInfo from "@/components/reseller";
 
 export const metadata: Metadata = {
   title: "Cloud9 Innovations",
@@ -31,6 +32,7 @@ export default function Home() {
       <Video />
       {/* <Brands /> */}
       <AboutSectionOne />
+      <ResellerInfo />
       {/* <AboutSectionTwo /> */}
       <Offer />
       <Team />
